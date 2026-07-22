@@ -1,62 +1,123 @@
-/* style.css */
+/* =========================================
+   Base Styles & Typography
+   ========================================= */
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     line-height: 1.6;
     max-width: 900px;
     margin: 0 auto;
     padding: 2rem;
-    color: #2c3e50;
-    background-color: #f8f9fa;
-}
-
-header {
-    text-align: center;
-    border-bottom: 2px solid #34495e;
-    margin-bottom: 2rem;
-    padding-bottom: 1rem;
+    color: #f0f0f0; /* Changes the default text to light grey so it shows up on dark blue */
+    background-color: #00152b; /* A very deep, dark navy blue for the site background */
 }
 
 h1 {
-    color: #2c3e50;
+    color: #ffffff; /* Bright white for the main title */
     margin-bottom: 0.5rem;
 }
 
 .subtitle {
-    color: #7f8c8d;
+    color: #9fb3c8; /* A light steel blue/grey for the subtitle */
     font-size: 1.2rem;
     font-style: italic;
     margin-top: 0;
 }
 
-/* Navigation Menu */
+/* =========================================
+   Header, Footer & Logo Layout
+   ========================================= */
+header {
+    margin-bottom: 2rem;
+    padding-bottom: 1rem;
+}
+
+.top-bar, .footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.logo-container {
+    flex: 1; 
+    display: flex;
+}
+
+.logo-container.left {
+    justify-content: flex-start;
+}
+
+.logo-container.right {
+    justify-content: flex-end;
+}
+
+.title-container {
+    flex: 2;
+    text-align: center;
+}
+
+.logo {
+    max-width: 80px; 
+    height: auto;
+    object-fit: contain;
+}
+
+footer {
+    margin-top: 4rem;
+    padding-top: 2rem;
+    border-top: 1px solid #2a3f54; /* Changes the footer line to a subtle dark blue-grey */
+    color: #9fb3c8; /* Light blue/grey text */
+    font-size: 0.9rem;
+}
+
+.footer-logo {
+    max-width: 50px; 
+    opacity: 0.8; 
+}
+
+/* =========================================
+   Navigation Menu
+   ========================================= */
+/* =========================================
+   Navigation Menu
+   ========================================= */
 nav {
     display: flex;
-    justify-content: center;
-    gap: 1.5rem;
+    justify-content: center; /* Keeps them centered */
+    gap: 2rem; /* Spreads the buttons out horizontally */
     margin-top: 1.5rem;
+    padding-bottom: 1.5rem; /* Adds space between the buttons and the line below */
     flex-wrap: wrap;
+    border-top: none; /* Removes the line above */
+    border-bottom: 2px solid #34495e; /* Restores the line beneath them */
 }
 
 nav a {
-    color: #2980b9;
+    background-color: #005bb5; /* A slightly darker blue */
+    color: #f0f0f0; /* Very light grey text */
     text-decoration: none;
     font-weight: bold;
-    padding: 0.5rem 1rem;
-    border-radius: 4px;
-    transition: background-color 0.3s;
+    padding: 0.6rem 1.2rem;
+    border-radius: 0; /* Removes the curve to make them perfectly rectangular */
+    transition: background-color 0.3s, transform 0.1s;
 }
 
 nav a:hover {
-    background-color: #ecf0f1;
+    background-color: #004488; /* An even darker blue when hovered */
+    color: #ffffff; /* Bright white text on hover */
     text-decoration: none;
+    transform: translateY(-2px); /* Slight lift effect */
 }
 
-/* Content Blocks */
+/* =========================================
+   Content Blocks (Essays, Activities, etc.)
+   ========================================= */
 .content-section {
     background: white;
+    color: #2c3e50; /* Forces the text inside the white box to be dark grey */
     padding: 2rem;
     border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.4); /* Made the shadow slightly stronger to pop against the dark background */
     margin-bottom: 2rem;
 }
 
@@ -78,19 +139,11 @@ nav a:hover {
     letter-spacing: 0.05em;
 }
 
-footer {
-    text-align: center;
-    margin-top: 4rem;
-    padding-top: 2rem;
-    border-top: 1px solid #bdc3c7;
-    color: #7f8c8d;
-    font-size: 0.9rem;
-}
-
-/* Gallery Grid Layout */
+/* =========================================
+   Gallery Grid (For Posters & Artwork)
+   ========================================= */
 .gallery-grid {
     display: grid;
-    /* This creates responsive columns that adjust based on screen size */
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 2rem;
     margin-top: 2rem;
@@ -101,14 +154,13 @@ footer {
 }
 
 .poster-item img {
-    width: 100%; /* Ensures the image never overflows its column */
+    width: 100%; 
     height: auto;
     border-radius: 6px;
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    transition: transform 0.2s; /* Adds a smooth hover animation */
+    transition: transform 0.2s; 
 }
 
-/* Optional: Makes the poster lift up slightly when you hover over it */
 .poster-item img:hover {
     transform: translateY(-5px);
 }
