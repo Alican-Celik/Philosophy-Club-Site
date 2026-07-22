@@ -1,0 +1,88 @@
+/* style.css */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 2rem;
+    color: #2c3e50;
+    background-color: #f8f9fa;
+}
+
+header {
+    text-align: center;
+    border-bottom: 2px solid #34495e;
+    margin-bottom: 2rem;
+    padding-bottom: 1rem;
+}
+
+h1 {
+    color: #2c3e50;
+    margin-bottom: 0.5rem;
+}
+
+.subtitle {
+    color: #7f8c8d;
+    font-size: 1.2rem;
+    font-style: italic;
+    margin-top: 0;
+}
+
+/* Navigation Menu */
+nav {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+    flex-wrap: wrap;
+}
+
+nav a {
+    color: #2980b9;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+nav a:hover {
+    background-color: #ecf0f1;
+    text-decoration: none;
+}
+
+/* Content Blocks */
+.content-section {
+    background: white;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    margin-bottom: 2rem;
+}
+
+.item-card {
+    border-left: 4px solid #34495e;
+    padding-left: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.item-card h3 {
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+}
+
+.meta-info {
+    font-size: 0.9rem;
+    color: #7f8c8d;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+footer {
+    text-align: center;
+    margin-top: 4rem;
+    padding-top: 2rem;
+    border-top: 1px solid #bdc3c7;
+    color: #7f8c8d;
+    font-size: 0.9rem;
+}
