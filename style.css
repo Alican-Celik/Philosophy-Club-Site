@@ -86,3 +86,36 @@ footer {
     color: #7f8c8d;
     font-size: 0.9rem;
 }
+
+/* Gallery Grid Layout */
+.gallery-grid {
+    display: grid;
+    /* This creates responsive columns that adjust based on screen size */
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.poster-item {
+    text-align: center;
+}
+
+.poster-item img {
+    width: 100%; /* Ensures the image never overflows its column */
+    height: auto;
+    border-radius: 6px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: transform 0.2s; /* Adds a smooth hover animation */
+}
+
+/* Optional: Makes the poster lift up slightly when you hover over it */
+.poster-item img:hover {
+    transform: translateY(-5px);
+}
+
+.poster-item p {
+    margin-top: 0.75rem;
+    font-size: 0.9rem;
+    color: #7f8c8d;
+    font-style: italic;
+}
