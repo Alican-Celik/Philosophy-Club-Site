@@ -171,3 +171,109 @@ nav a:hover {
     color: #7f8c8d;
     font-style: italic;
 }
+/* =========================================
+   Theme Toggle Switch Styling
+   ========================================= */
+.theme-switch-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    margin-top: 2rem;
+}
+
+.theme-label {
+    font-weight: bold;
+    font-size: 0.9rem;
+    color: inherit;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+/* The switch container */
+.theme-switch {
+    position: relative;
+    display: inline-block;
+    width: 54px;
+    height: 30px;
+}
+
+/* Hide the default HTML checkbox */
+.theme-switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+/* The sliding track */
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #2c3e50;
+    transition: 0.4s;
+}
+
+/* The sliding circle */
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 22px;
+    width: 22px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    transition: 0.4s;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+/* When the checkbox is checked, turn the track gold and move the circle */
+input:checked + .slider {
+    background-color: #d4af37;
+}
+
+input:checked + .slider:before {
+    transform: translateX(24px);
+}
+
+/* Rounded corners for the track and circle */
+.slider.round {
+    border-radius: 34px;
+}
+
+.slider.round:before {
+    border-radius: 50%;
+}
+/* =========================================
+   Golden Theme Color Overrides
+   ========================================= */
+/* When the body has the 'golden-theme' class, it changes the background */
+body.golden-theme {
+    background-color: #d4af37; 
+    color: #111111; 
+}
+
+/* Overrides the white text to dark text */
+body.golden-theme h1 {
+    color: #111111;
+}
+
+body.golden-theme .subtitle {
+    color: #333333;
+}
+
+/* Gives the white content boxes a warm, creamy tint so they don't look harsh */
+body.golden-theme .content-section {
+    background-color: #fffdf5; 
+    color: #2c3e50;
+    box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+}
+
+/* Updates the footer text and line to match */
+body.golden-theme footer {
+    border-top: 1px solid #b5952f;
+    color: #333333;
+}
